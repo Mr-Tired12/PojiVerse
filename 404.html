@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- JS -->
+     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const path = window.location.pathname;
+
+            // Check if running on GitHub Pages by checking the hostname
+            const isGitHubPages = window.location.hostname === 'your-username.github.io'; // replace with your GitHub username
+
+            // If on GitHub Pages, redirect from .html
+            if (isGitHubPages && path.endsWith('.html') && path !== '/index.html') {
+                const newPath = path.slice(0, -5); // Remove ".html"
+                window.location.replace(newPath);
+            }
+        });
+    </script>
+ 
+
+
+    <!-- Starting this project from here-->
+
+
+ <br>
+    <!-- body starts here -->
+
+
+    <title>Page Not Found - 404</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+<body>
+    <h1>404 - Page Not Found</h1>
+    <p>Sorry, the page you are looking for does not exist.</p>
+    <p><a href="../index.html">Go back to the homepage</a></p>
+</body>
+</html>
