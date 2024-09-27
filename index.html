@@ -82,39 +82,7 @@
 </div>
 
 
-    <div class="container">
-    
-      <br><br>
-      <input class="form-control" id="searchbar" type="text" onkeyup="search_blog()" placeholder="Type something to search ">
-      <br> 
-      <ul id='list'>
-        <li class="e3r"><a href="files/allen.html"> Allen Material </a></li>
-        <li class="e3r"><a href="files/resonance.html"> Resonance Material </a></li>
-        <li class="e3r"><a href="files/vkcalculus.html"> Vinay Kumar Integral Calculus </a></li>
-        <li class="e3r"><a href="files/bansal.html"> Bansal Classes Material </a></li>
-        <li class="e3r"><a href="files/ncert.html"> NCERT 11+12 (PCM) </a></li>
-        <li class="e3r"><a href="files/tmh.html"> TMH Mains & Advanced </a></li>
-        <li class="e3r"><a href="files/arihantpyq.html"> Arihant PYQ's book </a></li>
-    </ul>
-    </div>
-
-<!-- JS code for search bar-->    
-<script>
-function search_blog() {
-let input = document.getElementById('searchbar').value
-input=input.toLowerCase();
-let x = document.getElementsByClassName('e3r');
-
-for (i = 0; i < x.length; i++) {
-if (!x[i].innerHTML.toLowerCase().includes(input)) {
-    x[i].style.display="none";
-}
-else {
-    x[i].style.display="list-item";				
-}
-}
-}
-</script>
+   
 <!-- body ends here -->
 
     <!-- Ending this project-->
