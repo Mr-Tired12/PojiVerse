@@ -13,6 +13,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <!-- JS -->
      <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const path = window.location.pathname;
+            const isGitHubPages = window.location.hostname === 'mr-tired12.github.io'; 
+
+            if (isGitHubPages && path.endsWith('.html') && path !== '/index.html') {
+                const newPath = path.slice(0, -5); // Remove ".html"
+                window.location.replace(newPath);
+            }
+        });
+    </script>
   </head>
 
   <body>
@@ -45,7 +56,11 @@
         </li>
       </ul>
       <form class="d-flex">
-        <a href="https://github.com/Mr-Tired12/PojiVerse" target=”_blank”><button type="button" class="btn btn-light">Github <i class="fa fa-github"></i></button></a>
+       <a href="https://github.com/Mr-Tired12" target="_blank">
+              <button type="button" class="btn btn-light">
+               Github <i class="fa fa-github"></i>
+              </button>
+        </a>
       </form>
     </div>
   </div>
@@ -102,67 +117,67 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Mathematical Tools  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="mathematicaltools.html">Mathematical Tools  </a></th>
       <td>13 hrs</td>
       <td><a style="text-decoration:none">:(</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaev6ovGTwhfLLidWzCveoHZ" target=”_blank”>Click here</a></td>
     </tr>
      <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Error and measurement   </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="error.html">Error and measurement   </a></th>
       <td>7.5 hrs</td>
       <td><a style="text-decoration:none">:(</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMafDl40Jkm0VGDKm6j4xgClj" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Rectilinear motion </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="rectilinear.html">Rectilinear motion </a></th>
       <td>8 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1aqp5ZVl8ZrH2gYcVslsfH76g7juDT6OD/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadyoou3Fl2jR0pG3X1Wi6xA" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Projectile motion </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="projectile.html">Projectile motion </a></th>
       <td>5.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1aqp5ZVl8ZrH2gYcVslsfH76g7juDT6OD/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMac_AeDfj1l85vp_93Dk_Agt" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Relative motion </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="relative.html">Relative motion </a></th>
       <td>7 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1aqp5ZVl8ZrH2gYcVslsfH76g7juDT6OD/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadzVrsTcZqRkeZ6SOko8pMd" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Newton's laws of motion </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="nlm.html">Newton's laws of motion </a></th>
       <td>11 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1XGTYCr5gmff8aTiPXo3I9-FIMPx7_pYz/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadXu_0_nqUQAANlsPNxCM42" target=”_blank”>Click here</a></td>
     </tr>
      <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Friction </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="friction.html">Friction </a></th>
       <td>5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1XGTYCr5gmff8aTiPXo3I9-FIMPx7_pYz/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMafEN4paY3nfD2U3GsXSu_6F" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Work, Power and Energy </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="wpe.html">Work, Power and Energy </a></th>
       <td>10.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/15v-H3ARE-RqOq53T9XqM-WEONdnLEPuk/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadTDfU4hJ23tdPqIwV-v6io" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Circular motion </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="circular.html">Circular motion </a></th>
       <td>10.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1eZpZ1nbmEkQ1ynb3wzNWWw0y5dwaF8w7/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaeMjUB_3Z26hU58Gsbwm4Ji" target=”_blank”>Click here</a></td>
     </tr>
      <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Center of mass </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="com.html">Center of mass </a></th>
       <td>12.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1JIkz-Q-ai-O4N9hWQhcQjbUonohYnu8o/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMad-bxE6Fu7wyp_wyUcctCmU" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Rotational dynamics  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="rotation.html">Rotational dynamics  </a></th>
       <td>20 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1cTIpFX6OErW7tJdMw76TOCEWaiTZlNQO/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMacVaetkKqlCBstwK7TdjOa9" target=”_blank”>Click here</a></td>
@@ -191,31 +206,31 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#"> Kinetic theory of gases</a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="ktg.html"> Kinetic theory of gases</a></th>
       <td>4.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1pm0VA1nVasqokBmRzQjsb5k7lo7YCGjf/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaegSCELKLq7FFLhYJdVIL87" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Thermodynamics  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="thermodynamics.html">Thermodynamics  </a></th>
       <td>7.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1iJukIEhFu0rP74-EiU6mEgj0sx9l1tmj/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadOzxKmO5t223TkLNxCt2Vn" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Calorimetry </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="calorimetry.html">Calorimetry </a></th>
       <td>3 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1ImfEHe03LmyE_Bqse3-BnQ5KQgeN1-f-/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaf2W0zmaowmkA10PGo2LTv_" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Thermal expansion  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="thermal.html">Thermal expansion  </a></th>
       <td>3.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1Lnn4mLqtK5PIz2Kv7GG1Wt90IOeFsINS/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaf9s43maESqyRVDskARgaGh" target=”_blank”>Click here</a></td>
     </tr>
      <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Heat transfer  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="heat.html">Heat transfer  </a></th>
       <td>8 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1JfwXyA6ANor-j2FvZWfdLyz5N_rEDLdO/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadCqEDGWpPY-ScpPMZpVHqK" target=”_blank”>Click here</a></td>
@@ -244,49 +259,49 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#"> Simple harmonic motion </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="shm.html"> Simple harmonic motion </a></th>
       <td>12 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1_gf4MF3wP31sNpSvgyaXGJXPmf9iNlIO/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaclEO9yS-dyifDyAxIOqmTa" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Wave on string  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="wos.html">Wave on string  </a></th>
       <td>13.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1dMEFAoXjS1gWAGETSOUMTizDas9rYXTM/view?usp=sharing" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMafu-f7-CE7JXlzyi-l3FEfk" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Sound waves  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="sound.html">Sound waves  </a></th>
       <td>15.5 hrs</td>
       <td><a style="text-decoration:none" href="https://www.scribd.com/document/749229679/Sound-Waves-Notes-ABJ-Sir" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMac9yFGuvQIRmEDIdGaf-wRk" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Wave Optics  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="waveoptics.html">Wave Optics  </a></th>
       <td>13.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1kRNLdHaMAa651wQ5lXQ69tcukaWQ9udn/view" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMac8lrmOeJ3yuiqPPNXxnh6Q" target=”_blank”>Click here</a></td>
     </tr>
      <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Fluid mechanics   </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="fluid.html">Fluid mechanics   </a></th>
       <td>12 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/15mdejWV3TPOEwvVTX71r6p6DtdTO5SYm/view" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMacuWACFhY1HSZAfZlwml0X4" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Viscosity   </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="viscosity.html">Viscosity   </a></th>
       <td>2.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/15mdejWV3TPOEwvVTX71r6p6DtdTO5SYm/view" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaeuFFlZiVXrOQ3cDlvOl3qu" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Elasticity Properties of solids   </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="elasticity.html">Elasticity Properties of solids   </a></th>
       <td>3.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/15mdejWV3TPOEwvVTX71r6p6DtdTO5SYm/view" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaeHLCeyvLZUOImS9DpS9Upw" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Surface Tension   </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="surfacetension.html">Surface Tension   </a></th>
       <td>4.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/15mdejWV3TPOEwvVTX71r6p6DtdTO5SYm/view" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMafG5CsFH-5CttMefImCOjjA" target=”_blank”>Click here</a></td>
@@ -315,82 +330,70 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Electrostatics  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="electrostatics.html">Electrostatics  </a></th>
       <td>28 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1wxv1c1942BG9E9Bm7QbChnEEDKdUP7w-/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMae_Hntw2myU3dHQ417zcxn6" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Conductors (Electrostatics)   </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="conductors.html">Conductors (Electrostatics)   </a></th>
       <td>6.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/drive/folders/1YgjkUhVUGacci_dYU3MX40ZMdmlhzG4I" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMafRbbj8o0zvHGHrJV8FsxgZ" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Gravitation   </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="gravitation.html">Gravitation   </a></th>
       <td>7.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/15MUnUui8qXSSVyKXpv3LoB-rIXaX--CR/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaeGEjLX2pJU-qqnPcyjpBiV" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Capacitor/Capacitance  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="capacitor.html">Capacitor/Capacitance  </a></th>
       <td>12.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1wsZVp_IkK9AHsbsrOYEi882D7KgKmbyC/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaf4jTvOb0KoK4jmcZKw386A" target=”_blank”>Click here</a></td>
     </tr>
      <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Current electricity  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="currentelectricity.html">Current electricity  </a></th>
       <td>14 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1PL0kgiQhuHu9Rvamhu5OWpGRmQxt6Vhn/view?usp=sharing" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMafFQcF0bW3sccrtnGx0FXO2" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Electromagnetic forces  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="emf.html">Electromagnetic forces  </a></th>
       <td>11 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/174whQASeU1S8YUfA860y07EfpJfdOez-/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadhXJKhZnVuDeO_0UAaqIXB" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Magnetic effect of current  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="mei.html">Magnetic effect of current  </a></th>
       <td>10 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/174whQASeU1S8YUfA860y07EfpJfdOez-/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMacf--9QU-ep-YmRHc3e2_6v" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Magnetic properties of matter  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="magnetism.html">Magnetic properties of matter  </a></th>
       <td>5.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1i_s-geCopJA3fo366tFfwblgi_roLJ20/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaep4iUj6n41zCeyGQ6TlXcq" target=”_blank”>Click here</a></td>
     </tr>
      <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Electromagnetic Induction   </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="emi.html">Electromagnetic Induction   </a></th>
       <td>17.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1oVSTC6ishsPHFgGgUNa0yXJIcf7A5_bE/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadVthpkQ-MUWN5ldV_BO8op" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Alternating current  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="ac.html">Alternating current  </a></th>
       <td>7.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1YBR5O_MU-ALE2fk1eFZeCQKWV6N80tUV/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMafg7ZUZZpXS8mGSBP49fjl3" target=”_blank”>Click here</a></td>
     </tr>
      <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#"> Electromagnetic waves  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="emw.html"> Electromagnetic waves  </a></th>
       <td>5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/1aCyP59AGfHTTIHhSn_i5WimF_VI2ByM7/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaf_asByahBdaKz8R-iGB91L" target=”_blank”>Click here</a></td>
-    </tr>
-    <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Semiconductors  </a></th>
-      <td>11 hrs</td>
-      <td><a style="text-decoration:none">:(</a></td>
-      <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadpiaxmDasoChFugiq6K53N" target=”_blank”>Click here</a></td>
-    </tr>
-     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Communication system   </a></th>
-      <td>3 hrs</td>
-      <td><a style="text-decoration:none">:(</a></td>
-      <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadLq0IUyZW8s44EHCj3xClG" target=”_blank”>Click here</a></td>
     </tr>
   </tbody>
 </table>
@@ -416,31 +419,43 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#"> Geometrical Optics and Ray Optics </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="optics.html"> Geometrical Optics and Ray Optics </a></th>
       <td>25 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/13cCgKrS3rKlwZGvtYgrIBw0cOCzDRrCa/view?usp=sharing" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaeXk9ukLRM-SS-b3e18SMwj" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Atom & Bohr's model  </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="semiconductors.html">Semiconductors  </a></th>
+      <td>11 hrs</td>
+      <td><a style="text-decoration:none">:(</a></td>
+      <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadpiaxmDasoChFugiq6K53N" target=”_blank”>Click here</a></td>
+    </tr>
+     <tr>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="communicationsystum.html">Communication system   </a></th>
+      <td>3 hrs</td>
+      <td><a style="text-decoration:none">:(</a></td>
+      <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadLq0IUyZW8s44EHCj3xClG" target=”_blank”>Click here</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="atom.html">Atom & Bohr's model  </a></th>
       <td>8 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/17bP9mTkKABAbNeNmrAmrERSA6WYee5F4/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMadYqzTASKdG_r2YQ2XP8-o9" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Photoelectric Effect </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="photoelectric.html">Photoelectric Effect </a></th>
       <td>7.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/17XJkew5NlvEWveC88A0zWKUNnTMRmgh9/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMafsz-lLF3hcCPa3ntZegP-s" target=”_blank”>Click here</a></td>
     </tr>
     <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">X rays </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="xrays.html">X rays </a></th>
       <td>4 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/17Y3f6ifpvTiUdWDSCcBMpl7ugylsxi-d/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMaePCUyUqNrAhqPT3Lg8G85d" target=”_blank”>Click here</a></td>
     </tr>
      <tr>
-      <th scope="row"><a style="text-decoration: none; color: inherit;" href="#">Nuclear Physics   </a></th>
+      <th scope="row"><a style="text-decoration: none; color: inherit;" href="nuclear.html">Nuclear Physics   </a></th>
       <td>10.5 hrs</td>
       <td><a style="text-decoration:none" href="https://drive.google.com/file/d/17c-eV6KXascnemkqMGYgU2BZSckxnTKz/view?usp=drive_link" target=”_blank”>Click here</a></td>
       <td><a style="text-decoration:none" href="https://y2meta.app/playlist/PL_A4M5IAkMad1pjDKqz6DZuH32ynVQjqh" target=”_blank”>Click here</a></td>

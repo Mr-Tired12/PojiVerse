@@ -1,0 +1,235 @@
+ <!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>PojiVerse</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>       
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        #video-container {
+            padding: 20px;
+            border-right: 1px solid #e0e0e0;
+        }
+        #playlist-container {
+            max-height: 500px; /* Fixed height for the playlist */
+            overflow-y: auto;  /* Enable vertical scrolling */
+        }
+        .playlist-title {
+            text-align: center; /* Center title */
+            white-space: nowrap; /* Prevent text wrap */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Show ellipsis for overflow */
+        }
+        .playlist-item {
+            cursor: pointer; /* Indicate clickable item */
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-top: -20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #playlist-container {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; /* Enable scrolling if needed */
+            height: 100%; /* Ensure it takes full height */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+        }
+        .list-group-item {
+            padding: 10px; /* Adjust padding for items */
+        }
+    </style>
+
+    <!-- JS -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const path = window.location.pathname;
+            const isGitHubPages = window.location.hostname === 'mr-tired12.github.io'; 
+
+            if (isGitHubPages && path.endsWith('.html') && path !== '/index.html') {
+                const newPath = path.slice(0, -5); // Remove ".html"
+                window.location.replace(newPath);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Starting this project from here-->
+    <!-- navbar starts here -->
+ <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">PojiVerse</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+      <a class="nav-link" href="../index.html">Home
+        <span class="visually-hidden">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../pages/physics.html">Physics </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/chemistry.html">Chemistry</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/maths.html">Maths</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/downloads.html">Downloads</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+       <a href="https://github.com/Mr-Tired12" target="_blank">
+              <button type="button" class="btn btn-light">
+               Github <i class="fa fa-github"></i>
+              </button>
+        </a>
+      </form>
+    </div>
+  </div>
+</nav>
+               
+    <!-- navbar ends here -->
+
+    <br>
+    <!-- body starts here -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8" id="video-container">
+                    <div class="row">
+                        <div class="video-container">
+                            <iframe id="mainVideo" src="https://www.youtube.com/embed/mffkVI7W-z8?rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="playlist-container">
+                    <div class="list-group" id="videoList"></div>
+                </div>
+            </div>
+
+            <script>
+                const videos = [
+     { id: 'mffkVI7W-z8', title: "Geometrical Optics Part 1" },
+     { id: 'dZGLqguFHEM', title: "Geometrical Optics Part 2" },
+     { id: 'Lc0pn3vmlXk', title: "Geometrical Optics Part 3" },
+     { id: 'p0KbWJub8yw', title: "Geometrical Optics Part 4" },
+     { id: '__I31256Y_U', title: "Geometrical Optics Part 5" },
+     { id: 'SqFq6XMUV8k', title: "Geometrical Optics Part 6" },
+     { id: 'ti0Y5NCbcFY', title: "Geometrical Optics Part 7" },
+     { id: 'Ei1_CXZHlTw', title: "Geometrical Optics Part 8" },
+     { id: 'w8inNHytiBw', title: "Geometrical Optics Part 9" },
+     { id: 'ZOnoMPDHq8k', title: "Geometrical Optics Part 10" },
+     { id: 'dc6uzvsaMoY', title: "Geometrical Optics Part 11" },
+     { id: 'z72YAaSIxOQ', title: "Geometrical Optics Part 12" },
+     { id: 'UrIrNiRO_Ug', title: "Geometrical Optics Part 13" },
+     { id: 'IoplPD-JARM', title: "Geometrical Optics Part 14" },
+     { id: 'QxQ3DV7Pf6w', title: "Geometrical Optics Part 15" },
+     { id: '5D3ysQ0qSqo', title: "Geometrical Optics Part 16" },
+     { id: 'gVP9IR6HmVw', title: "Geometrical Optics Part 17" },
+     { id: 'tdlILyG3UbQ', title: "Geometrical Optics Part 18" },
+     { id: '6wwTko8qVxc', title: "Geometrical Optics Part 19" },
+     { id: '5YLcjcvwjEk', title: "Geometrical Optics Part 20" },
+     { id: 'beJuTCAeKMU', title: "Geometrical Optics Part 21" },
+     { id: 'besi9cirQCw', title: "Geometrical Optics Part 22" },
+     { id: '30uvtWlwBpc', title: "Geometrical Optics Part 23" },
+     { id: 'pkmXEguCJKY', title: "Geometrical Optics Part 24" },
+     { id: 'Vv7JR5UdGVU', title: "Geometrical Optics Part 25" },
+     { id: 'YfZEzWKnmic', title: "Geometrical Optics Part 26" },
+     { id: 'mSu6Y5RPqUs', title: "Geometrical Optics Part 27" },
+     { id: 'VDf75jNR0hw', title: "Geometrical Optics Part 28" },
+     { id: 'jG-MsSz_P3w', title: "Geometrical Optics Part 29" },
+     { id: 'j7N_EUaeClU', title: "Geometrical Optics Part 30" },
+     { id: 'dJTP2zAZBKM', title: "Geometrical Optics Part 31" },
+     { id: '41NVgUykyDE', title: "Geometrical Optics Part 32" },
+     { id: 'TyLMZCpWpAs', title: "Geometrical Optics Part 33" },
+     { id: 'uApiU45BHdU', title: "Geometrical Optics Part 34" },
+     { id: '6d1UYtqpz-8', title: "Geometrical Optics Part 35" },
+     { id: '3MG1s70fPSI', title: "Geometrical Optics Part 36" },
+     { id: '9cnWeNr9y58', title: "Geometrical Optics Part 37" },
+     { id: 'LM0kdSTtkU0', title: "Geometrical Optics Part 38" },
+     { id: '8fvHbMHbmfw', title: "Geometrical Optics Part 39" },
+     { id: '-ff2ZG9uTQg', title: "Geometrical Optics Part 40" },
+     { id: 'y_Ow8gxWZYg', title: "Geometrical Optics Part 41" },
+     { id: 'YZCnBIA8XVs', title: "Geometrical Optics Part 42" },
+     { id: '3dEX3DNTXIE', title: "Geometrical Optics Part 43" },
+     { id: 'l4sRW9UkBs4', title: "Geometrical Optics Part 44" },
+     { id: 'meqV2a0c5fI', title: "Geometrical Optics Part 45" },
+     { id: 'X2oKAuCKORE', title: "Geometrical Optics Part 46" },
+     { id: 'RE5MKCv3SZE', title: "Geometrical Optics Part 47" },
+     { id: 'uOk_3fSTNa8', title: "Geometrical Optics Part 48" },
+     { id: '3aAZ_bigdhk', title: "Geometrical Optics Part 49" },
+     { id: 'aFJZynvBDm4', title: "Geometrical Optics Part 50" },
+     { id: '2Bw0DsX1isA', title: "Geometrical Optics Part 51" },
+     { id: 'UL1S_3OIqUM', title: "Geometrical Optics Part 52" },
+     { id: 'QJPysUOoE5c', title: "Geometrical Optics Part 53" },
+     { id: 'vzcEA_fUTfE', title: "Geometrical Optics Part 54" },
+     { id: '6j4P7oEVsU8', title: "Geometrical Optics Part 55" },
+     { id: 'Nx_o7z7BAkk', title: "Geometrical Optics Part 56" },
+     { id: 'K0hleAyLnWM', title: "Geometrical Optics Part 57" },
+     { id: '6sodz3lTB8U', title: "Geometrical Optics Part 58" },
+     { id: 'hIYH1OYUPek', title: "Geometrical Optics Part 59" },
+     { id: 'PSVJEsB0J44', title: "Geometrical Optics Part 60" },
+     { id: 'KjSYy8kPGLc', title: "Geometrical Optics Part 61" },
+     { id: 'cy1itLAfRYI', title: "Geometrical Optics Part 62" },
+     { id: 'PzntxqEt8Aw', title: "Geometrical Optics Part 63" },
+     { id: 'nWNCF1u_zQU', title: "Geometrical Optics Part 64" },
+     { id: 'HVXqdCM81P8', title: "Geometrical Optics Part 65" },
+     { id: 'isaAs6sKdsw', title: "Geometrical Optics Part 66" },
+     { id: '3UTLFFvHkOM', title: "Geometrical Optics Part 67" },
+     { id: '-6muQNvDRtw', title: "Geometrical Optics Part 68" }
+
+                 ];
+
+                const videoList = document.getElementById('videoList');
+
+                videos.forEach(video => {
+                    const item = document.createElement('div');
+                    item.className = 'list-group-item playlist-item';
+                    item.onclick = () => changeVideo(video.id);
+                    item.innerHTML = `
+                        <div class="d-flex align-items-center">
+                            <img src="https://img.youtube.com/vi/${video.id}/hqdefault.jpg" alt="${video.title}" class="mr-3" style="width: 100%; max-width: 120px;">
+                            <span class="playlist-title" style="margin-left: 10px;">${video.title}</span>
+                        </div>
+                    `;
+                    videoList.appendChild(item);
+                });
+
+                function changeVideo(videoId) {
+                    const iframe = document.getElementById('mainVideo');
+                    iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0`;
+                }
+            </script>
+
+            <!-- Bootstrap JS (Optional) -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        </div>
+    </section>
+</body>
+</html>

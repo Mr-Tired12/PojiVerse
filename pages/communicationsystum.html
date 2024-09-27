@@ -1,0 +1,170 @@
+ <!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>PojiVerse</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>       
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        #video-container {
+            padding: 20px;
+            border-right: 1px solid #e0e0e0;
+        }
+        #playlist-container {
+            max-height: 500px; /* Fixed height for the playlist */
+            overflow-y: auto;  /* Enable vertical scrolling */
+        }
+        .playlist-title {
+            text-align: center; /* Center title */
+            white-space: nowrap; /* Prevent text wrap */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Show ellipsis for overflow */
+        }
+        .playlist-item {
+            cursor: pointer; /* Indicate clickable item */
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-top: -20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #playlist-container {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; /* Enable scrolling if needed */
+            height: 100%; /* Ensure it takes full height */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+        }
+        .list-group-item {
+            padding: 10px; /* Adjust padding for items */
+        }
+    </style>
+
+    <!-- JS -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const path = window.location.pathname;
+            const isGitHubPages = window.location.hostname === 'mr-tired12.github.io'; 
+
+            if (isGitHubPages && path.endsWith('.html') && path !== '/index.html') {
+                const newPath = path.slice(0, -5); // Remove ".html"
+                window.location.replace(newPath);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Starting this project from here-->
+    <!-- navbar starts here -->
+ <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">PojiVerse</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+      <a class="nav-link" href="../index.html">Home
+        <span class="visually-hidden">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../pages/physics.html">Physics </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/chemistry.html">Chemistry</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/maths.html">Maths</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/downloads.html">Downloads</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+       <a href="https://github.com/Mr-Tired12" target="_blank">
+              <button type="button" class="btn btn-light">
+               Github <i class="fa fa-github"></i>
+              </button>
+        </a>
+      </form>
+    </div>
+  </div>
+</nav>
+               
+    <!-- navbar ends here -->
+
+    <br>
+    <!-- body starts here -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8" id="video-container">
+                    <div class="row">
+                        <div class="video-container">
+                            <iframe id="mainVideo" src="https://www.youtube.com/embed/Z8_iwVGcpjA?rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="playlist-container">
+                    <div class="list-group" id="videoList"></div>
+                </div>
+            </div>
+
+            <script>
+                const videos = [
+                   { id: 'Z8_iwVGcpjA', title: "Communication Systems Part 1" },
+                   { id: 'tvMABjmxQ3k', title: "Communication Systems Part 2" },
+                   { id: 'lkDKA5D8Nng', title: "Communication Systems Part 3" }
+
+                 ];
+
+                const videoList = document.getElementById('videoList');
+
+                videos.forEach(video => {
+                    const item = document.createElement('div');
+                    item.className = 'list-group-item playlist-item';
+                    item.onclick = () => changeVideo(video.id);
+                    item.innerHTML = `
+                        <div class="d-flex align-items-center">
+                            <img src="https://img.youtube.com/vi/${video.id}/hqdefault.jpg" alt="${video.title}" class="mr-3" style="width: 100%; max-width: 120px;">
+                            <span class="playlist-title" style="margin-left: 10px;">${video.title}</span>
+                        </div>
+                    `;
+                    videoList.appendChild(item);
+                });
+
+                function changeVideo(videoId) {
+                    const iframe = document.getElementById('mainVideo');
+                    iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0`;
+                }
+            </script>
+
+            <!-- Bootstrap JS (Optional) -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        </div>
+    </section>
+</body>
+</html>
